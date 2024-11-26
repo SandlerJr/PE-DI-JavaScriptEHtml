@@ -7,8 +7,14 @@ Seria isso um programa? Descubra visitando o Alura <a href="http//www.alura.com.
 <script>
     alert('Isso sim é um programa!');
 
-    function pularLinha(){
-        document.write("<br>");
+    function pularLinha(multiplicador){
+        if( !multiplicador){
+            document.write("<br>");
+        } else {
+            for (var n = 0; n < multiplicador; n++) { 
+                    document.write("<br>");
+            }
+        }    
     }
 
     var ano = 2016;
@@ -20,8 +26,8 @@ Seria isso um programa? Descubra visitando o Alura <a href="http//www.alura.com.
 
     var ano = 2017;
     document.write("Barney tem " + (2016 - 1976) + " anos");
-    pularLinha();
-    
+    pularLinha(2);
+
     var idadeFlavio = 39;
     var idadeJoaquim = 20;
     var idadeBarney = 41;

@@ -17,20 +17,20 @@ Seria isso um programa? Descubra visitando o Alura <a href="http//www.alura.com.
         }    
     }
 
-    function mostrar(frase){
+    function mostrar(frase, numeroDeQuebraDeLinha){
         document.write(frase);
+        pularLinha(numeroDeQuebraDeLinha);
     }
 
     var ano = 2016;
 
-    mostrar("Flávio tem " + (ano - 1977) + " anos");
-    pularLinha();
-    mostrar("Joaquim tem " + (ano - 1996) + " anos");
-    pularLinha();
+    mostrar("Flávio tem " + (ano - 1977) + " anos"); // propositalmente sem o segundo parametro
+    
+    mostrar("Joaquim tem " + (ano - 1996) + " anos", 1);
+    
 
     var ano = 2017;
-    mostrar("Barney tem " + (2016 - 1976) + " anos");
-    pularLinha(2);
+    mostrar("Barney tem " + (2016 - 1976) + " anos", 2);
 
     var idadeFlavio = 39;
     var idadeJoaquim = 20;

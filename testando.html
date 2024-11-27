@@ -17,15 +17,19 @@ Seria isso um programa? Descubra visitando o Alura <a href="http//www.alura.com.
         }    
     }
 
+    function mostrar(frase){
+        document.write(frase);
+    }
+
     var ano = 2016;
 
-    document.write("Flávio tem " + (ano - 1977) + " anos");
+    mostrar("Flávio tem " + (ano - 1977) + " anos");
     pularLinha();
-    document.write("Joaquim tem " + (ano - 1996) + " anos");
+    mostrar("Joaquim tem " + (ano - 1996) + " anos");
     pularLinha();
 
     var ano = 2017;
-    document.write("Barney tem " + (2016 - 1976) + " anos");
+    mostrar("Barney tem " + (2016 - 1976) + " anos");
     pularLinha(2);
 
     var idadeFlavio = 39;
@@ -35,5 +39,5 @@ Seria isso um programa? Descubra visitando o Alura <a href="http//www.alura.com.
 
     var media = todasAsIdades/3;
 
-    document.write("A media de idades dos três é de " + Math.round(media) + " anos.");
+    mostrar("A media de idades dos três é de " + Math.round(media) + " anos.");
 </script>

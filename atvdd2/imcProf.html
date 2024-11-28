@@ -11,14 +11,12 @@
         pularLinha();
     }
 
-    var pesoFlavio = 73;
-    var alturaFlavio = 1.71;
-    var imcFlavio = pesoFlavio / (alturaFlavio * alturaFlavio);
-    mostrar("O IMC do Flavio é " + imcFlavio);
+    function calcularIMC(peso, altura){
+        var imc = peso / (altura * altura);
+        mostrar('O IMC calculado é ' + imc)
+    }
 
-    var pesoAmg = 73;
-    var alturaAmg = 1.71;
-    var imcAmg = pesoAmg / (alturaAmg * alturaAmg);
-    mostrar("O IMC do Amigo é " + imcAmg);
+    calcularIMC( 73 , 1.71);
+    calcularIMC( 68 , 1.72);
 
 </script>

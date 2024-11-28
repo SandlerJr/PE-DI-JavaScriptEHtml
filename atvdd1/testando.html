@@ -1,0 +1,44 @@
+<meta charset="UTF-8">
+<h1>Meu primeiro teste!</h1>
+<br>
+Seria isso um programa? Descubra visitando o Alura <a href="http//www.alura.com.br">aqui</a>!
+<br>
+
+<script>
+    
+    function pularLinha(multiplicador){
+        if( !multiplicador){
+            document.write("<br>");
+        } else {
+            for (var n = 0; n < multiplicador; n++) { 
+                    document.write("<br>");
+            }
+        }    
+    }
+
+    function mostrar(frase, numeroDeQuebraDeLinha){
+        document.write(frase);
+        pularLinha(numeroDeQuebraDeLinha);
+    }
+    
+    alert('Isso sim é um programa!');
+
+    var ano = 2016;
+
+    mostrar("Flávio tem " + (ano - 1977) + " anos"); // propositalmente sem o segundo parametro
+    
+    mostrar("Joaquim tem " + (ano - 1996) + " anos", 1);
+    
+
+    var ano = 2017;
+    mostrar("Barney tem " + (2016 - 1976) + " anos", 2);
+
+    var idadeFlavio = 39;
+    var idadeJoaquim = 20;
+    var idadeBarney = 41;
+    var todasAsIdades = idadeFlavio + idadeJoaquim + idadeBarney
+
+    var media = todasAsIdades/3;
+
+    mostrar("A media de idades dos três é de " + Math.round(media) + " anos.");
+</script>

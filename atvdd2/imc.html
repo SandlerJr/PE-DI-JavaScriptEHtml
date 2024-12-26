@@ -15,7 +15,18 @@
         return peso / (altura ** 2);
     }
 
-    var nome = prompt("Informe o seu nome")
+    function validaNome(nome) {
+        if (!nome || nome.trim() === "") {
+            return false;
+        }
+        return true;
+    }
+
+    var nome = prompt("Informe o seu nome");
+    while (!validaNome(nome)) {
+        nome = prompt("Nome inválido. Informe seu nome novamente:");
+    }
+
     var pesoInformado = prompt(nome + ", informe seu peso");
     var alturaInformada = prompt(nome + ", informe a sua altura");    
     var imcTotal = calcularIMC(pesoInformado , alturaInformada);

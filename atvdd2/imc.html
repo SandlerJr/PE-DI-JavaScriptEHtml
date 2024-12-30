@@ -23,9 +23,9 @@
     }
 
     function validaNumero(numero) {
-        if (isNaN(numero)) {
-            console.log("Por favor, insira apenas números.");
-            return false; 
+        if (isNaN(numero) || !numero.trim() || numero <= 0) {
+        console.log("Por favor, insira um número válido.");
+        return false; 
         }
         return true;
     }

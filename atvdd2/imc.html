@@ -22,13 +22,29 @@
         return true;
     }
 
+    function validaNumero(numero) {
+        if (isNaN(numero)) {
+            console.log("Por favor, insira apenas números.");
+            return false; 
+        }
+        return true;
+    }
+
     var nome = prompt("Informe o seu nome");
     while (!validaNome(nome)) {
         nome = prompt("Nome inválido. Informe seu nome novamente:");
     }
 
     var pesoInformado = prompt(nome + ", informe seu peso");
-    var alturaInformada = prompt(nome + ", informe a sua altura");    
+    while (!validaNumero(pesoInformado)) {
+        pesoInformado = prompt(nome + ", informe um peso válido:");
+    }
+
+    var alturaInformada = prompt(nome + ", informe a sua altura");   
+    while (!validaNumero(alturaInformada)) {
+        alturaInformada = prompt(nome + ", informe uma altura válida:");
+    }
+
     var imcTotal = calcularIMC(pesoInformado , alturaInformada);
 
     mostrar(nome + ", o seu IMC calculado é " + imcTotal);

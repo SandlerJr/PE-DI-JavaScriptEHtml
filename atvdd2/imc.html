@@ -35,14 +35,14 @@
         nome = prompt("Nome inválido. Informe seu nome novamente:");
     }
 
-    var pesoInformado = prompt(nome + ", informe seu peso");
+    var pesoInformado = prompt(nome + ", informe seu peso em kg (ex: 63 )");
     while (!validaNumero(pesoInformado)) {
-        pesoInformado = prompt(nome + ", informe um peso válido:");
+        pesoInformado = prompt(nome + ", informe um peso válido (ex: 63):");
     }
 
-    var alturaInformada = prompt(nome + ", informe a sua altura");   
+    var alturaInformada = prompt(nome + ", informe a sua altura em metros (ex: 1.68)");   
     while (!validaNumero(alturaInformada)) {
-        alturaInformada = prompt(nome + ", informe uma altura válida:");
+        alturaInformada = prompt(nome + ", informe uma altura válida (ex: 1.68):");
     }
 
     var imcTotal = calcularIMC(pesoInformado , alturaInformada);

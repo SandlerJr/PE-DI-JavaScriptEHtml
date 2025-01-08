@@ -30,6 +30,20 @@
         return true;
     }
 
+    function comparaçaoDeIMC(){
+        if(imc < 18.5) {
+            mostra("Você está abaixo do recomendado");
+        }
+
+        if(imc > 35) {
+            mostra("Você está acima do recomendado");
+        }
+
+        if(imc >= 18.5 && imc <= 35) {
+            mostra("Seu IMC está excelente!");
+        }
+    }
+
     var nome = prompt("Informe o seu nome");
     while (!validaNome(nome)) {
         nome = prompt("Nome inválido. Informe seu nome novamente:");
@@ -48,5 +62,9 @@
     var imcTotal = calcularIMC(pesoInformado , alturaInformada);
 
     mostrar(nome + ", o seu IMC calculado é " + imcTotal.toFixed(2));
+    
+    mostra(nome + ", o seu IMC é " + imc);
 
+    comparaçaoDeIMC(imcTotal);
+    
 </script>

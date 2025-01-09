@@ -11,13 +11,34 @@
         pularLinha();
     }
 
-    var numeroPensado = Math.round(Math.random() * 10);
-    var chute = parseInt(prompt("digite seu chute!")); 
+    function compararNumeros(numeroPensado, chute) {
+        var contador = 1;
 
-    if(chute == numeroPensado) {
-        mostrar("Você acertou!");
-    } else {
-        mostrar("Você errou, o número pensado foi " + numeroPensado);
+        while (numeroPensado != chute) {
+            let opcao; 
+
+            if (numeroPensado > chute) {
+                opcao = "maior";
+            } else {
+                opcao = "menor";
+            }
+
+            const mensagemDeErro = "Tente novamente. Dica: O número pensado é " + opcao + " que o anterior!";
+            chute = parseInt(prompt(mensagemDeErro)); 
+
+            contador += 1; 
+        }
+
+        if (contador === 1) {
+            mostrar("Parabéns! Você acertou de primeira!");
+        } else {
+            mostrar("Você acertou, precisou de " + contador + " tentativas!");
+        }
     }
+
+    var numeroPensado = Math.round(Math.random() * 10);
+    var chute = parseInt(prompt("Digite seu chute!")); 
+
+    compararNumeros(numeroPensado, chute);
 
 </script> 

@@ -27,7 +27,7 @@
         }
     }
 
-    function calcularCopasAtéDataLimite(anoCopa, limite) {
+    function calcularCopasAteDataLimite(anoCopa, limite) {
     while (anoCopa <= limite) {
         mostrar("Teve copa em " + anoCopa);
         anoCopa += 4;
@@ -36,13 +36,13 @@
 
     var anoBase = parseInt(prompt("Entre com a data do ano de comparação"));
     var limite = parseInt(prompt("Entre com a data limite"));
-    var anoCopa1 = 1930;
+    var anoCopa = 1930;
 
     if (anoBase <= limite) {
-        calcularCopasPassadas(anoCopa1, anoBase);
+        calcularCopasPassadas(anoCopa, anoBase);
         calcularCopasFuturas(anoBase, limite);
     } else {
-        calcularCopasAtéDataLimite(anoCopa1, limite);
+        calcularCopasAteDataLimite(anoCopa, limite);
     }
 
 </script>

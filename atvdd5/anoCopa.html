@@ -14,12 +14,13 @@
     function calcularCopasPassadas(anoCopa, anoBase) {
         while (anoCopa <= anoBase) {
             mostrar("Teve copa em " + anoCopa);
+            ultimaCopa = anoCopa;
             anoCopa += 4;
         }
     }
 
     function calcularCopasFuturas(anoAtual, limite) {
-        let proximaCopa = anoAtual + 4;
+        let proximaCopa = ultimaCopa + 4;
 
         while (proximaCopa <= limite) {
             mostrar("Ainda vamos ter copa no ano de " + proximaCopa);
@@ -40,7 +41,7 @@
 
     if (anoBase <= limite) {
         calcularCopasPassadas(anoCopa, anoBase);
-        calcularCopasFuturas(anoBase, limite);
+        calcularCopasFuturas(anoCopa, limite);
     } else {
         calcularCopasAteDataLimite(anoCopa, limite);
     }

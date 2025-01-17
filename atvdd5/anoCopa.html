@@ -15,6 +15,11 @@
     var limite = parseInt(prompt("Entre com a data limite"));
     var anoCopa1 = 1930;
 
-    
+    if (anoBase <= limite) {
+        calcularCopasPassadas(anoCopa1, anoBase);
+        calcularCopasFuturas(anoBase, limite);
+    } else {
+        calcularCopasAtéDataLimite(anoCopa1, limite);
+    }
 
 </script>

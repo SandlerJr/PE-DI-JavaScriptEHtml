@@ -18,6 +18,15 @@
         }
     }
 
+    function calcularCopasFuturas(anoAtual, limite) {
+        let proximaCopa = anoAtual + 4;
+
+        while (proximaCopa <= limite) {
+            mostrar("Ainda vamos ter copa no ano de " + proximaCopa);
+            proximaCopa += 4;
+        }
+    }
+
     var anoBase = parseInt(prompt("Entre com a data do ano de comparação"));
     var limite = parseInt(prompt("Entre com a data limite"));
     var anoCopa1 = 1930;
